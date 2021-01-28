@@ -1,0 +1,115 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+
+
+   
+}
+.quizMainDiv{
+ 
+ height: 63vh;
+ width: 100%;
+
+ font-family: 'Shadows Into Light', cursive;
+
+}
+
+
+
+
+
+.slika{
+    height: 55%;
+    width: 100%;
+}
+
+
+
+.questionsMaincontainer{
+    height: 20vh;
+    width: 100%;
+    font-family: 'Architects Daughter', cursive;
+
+}
+
+@media only screen and (max-width: 1350px) {
+
+    .slika{
+        height: 50%;
+        width: 100%;
+    }
+ 
+   
+  }
+  
+@media only screen and (max-width: 1250px) {
+
+    .slika{
+        height: 50%;
+        width: 100%;
+    }
+ 
+   
+  }
+  @media only screen and (max-width: 1170px) {
+
+    .slika{
+        height: 60%;
+        width: 100%;
+    }
+ 
+   
+  }
+  @media only screen and (max-width: 995px) {
+
+    .slika{
+        height: 75%;
+        width: 100%;
+    }
+ 
+   
+  }
+
+
+@media only screen and (max-width: 768px) {
+
+    .slika{
+        height: 110%;
+        width: 100%;
+    }
+    .t{
+        font-size: 0.8em;
+    }
+
+   
+  }
+
+  @media only screen and (max-width: 450px) {
+
+    .slika{
+        height: 120%;
+        width: 100%;
+    }
+    .t{
+        font-size: 0.6em;
+    }
+
+
+   
+  }
+  @media only screen and (max-width: 400px) {
+
+    .slika{
+        height: 140%;
+        width: 100%;
+    }
+
+   
+  }
+
