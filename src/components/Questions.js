@@ -350,7 +350,8 @@ const redTime= setInterval(()=>{
     render() {
         const borderRadius={
             borderRadius:'7px',
-            backgroundColor:"grey"
+            backgroundColor:"grey",
+            marginBottom:"15px"
           
         }
         return (
@@ -379,14 +380,14 @@ const redTime= setInterval(()=>{
                 <Container>
                     <Row>
                             
-                   <Col xs={5} className="">
+                   <Col md={6} sm={12} className="">
                        
                    <Button style={borderRadius} className="w-100 allBtns" onClick={this.aBtnSendstate}><h6> <span className="float-left text-warning">a:</span>  <span className="text-center text-light aBtnValue t">{this.state.aBtnValue[`${this.state.q2}`]}</span></h6></Button>
 
                </Col>
 
 
-                    <Col xs={5} className="">
+                    <Col md={6} sm={12} className="">
                     <Button style={borderRadius} className="w-100 allBtns" onClick={this.bBtnSendstate}><h6><span className="float-left text-warning">b:</span> <span className="text-center text-light bBtnValue t">{this.state.bBtnValue[`${this.state.q2}`]}</span></h6></Button>
                     </Col>
 
@@ -403,12 +404,12 @@ const redTime= setInterval(()=>{
                 <Container>
                     <Row>
                         
-                      <Col xs={5}  className="b">
+                      <Col md={6} sm={12} className="b">
                       <Button style={borderRadius} className="w-100 allBtns" onClick={this.cBtnSendstate}> <h6><span className="float-left text-warning">c:</span> <span className="text-center text-light cBtnValue t">{this.state.cBtnValue[`${this.state.q2}`]}</span></h6></Button>
 
                        </Col>
 
-                       <Col xs={5}  className="b">
+                       <Col md={6} sm={12} className="b">
 
                        <Button style={borderRadius} className="w-100 allBtns" onClick={this.dBtnSendstate}><h6><span className="float-left text-warning">d:</span> <span className="text-center text-light dBtnValue t">{this.state.dBtnValue[`${this.state.q2}`]}</span></h6></Button>
 

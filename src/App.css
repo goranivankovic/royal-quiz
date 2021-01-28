@@ -84,7 +84,7 @@
         width: 100%;
     }
     .t{
-        font-size: 0.8em;
+        font-size: 1em;
     }
 
    
@@ -97,19 +97,46 @@
         width: 100%;
     }
     .t{
-        font-size: 0.6em;
+        font-size: 0.9em;
     }
 
 
    
   }
-  @media only screen and (max-width: 400px) {
+
+  @media only screen and (max-width: 500px) {
 
     .slika{
-        height: 140%;
+        height: 130%;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    .slika{
+        height: 135%;
         width: 100%;
     }
 
    
   }
+ 
+
+
+
+
+  @media only screen and (max-width: 400px) {
+
+    .slika{
+        height: 150%;
+        width: 100%;
+    }
+
+   
+  }
+ 
+
+   
+  
 
