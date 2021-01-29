@@ -69,7 +69,7 @@
   @media only screen and (max-width: 995px) {
 
     .slika{
-        height: 75%;
+        height: 60%;
         width: 100%;
     }
  
@@ -80,7 +80,32 @@
 @media only screen and (max-width: 768px) {
 
     .slika{
-        height: 110%;
+        height: 85%;
+        width: 100%;
+    }
+    .t{
+        font-size: 1em;
+    }
+
+   
+  }
+  @media only screen and (max-width: 758px) {
+
+    .slika{
+        height: 90%;
+        width: 100%;
+    }
+    .t{
+        font-size: 1em;
+    }
+
+   
+  }
+  
+@media only screen and (max-width: 700px) {
+
+    .slika{
+        height: 95%;
         width: 100%;
     }
     .t{
@@ -90,24 +115,26 @@
    
   }
 
-  @media only screen and (max-width: 450px) {
+
+  @media only screen and (max-width: 600px) {
 
     .slika{
-        height: 120%;
+        height: 100%;
         width: 100%;
     }
     .t{
-        font-size: 0.9em;
+        font-size: 1em;
     }
-
 
    
   }
 
+
+
   @media only screen and (max-width: 500px) {
 
     .slika{
-        height: 130%;
+        height: 125%;
         width: 100%;
     }
 }
