@@ -17,7 +17,7 @@ export default class Questions extends Component {
           aBtnValue:['','Yen','England','Star City','Walt Whitman','1942','The explosion of a star','X-ray vision','Polygraph','Smooth Criminal','Basketball','Monaco','Tibet','Alexandr Graham Bell','Asmara','Libya','Ankara','Friedrich Nietzsche','Perro','0','Rha'],
           bBtnValue:['','Dinar','Spain','Metropolis','Leonardo da Vinci','1943','An intense lightning storm','Sixth sense','Seismograph','Remember the Time','Soccer','Vatican City','Nepal','Thomas Edison','Dakar','Finland','Burma','John Locke','Zorro','12','Demeter'],
           cBtnValue:['','Ngultrum','France','Gotham','Franz Kafka','1945','An underwater volcano','Echolocation','Teregraph','I Will Always Love You','Football','Liechtenstein','between Tibet and Nepal','Henry Ford','Nairobi','South Africa','Ceylon','Immanuel Kant','Lobo','42','Persephone'],
-          dBtnValue:['','Yen','Italy','Springfield','William Shakespeare','1947','The eye of a tornado','Inter-species communication','Omnigraph','Earth Song','Baseball','San Marino','Switzerland','Samuel Morse','Johannesburg','Mexico','Siam','Rene Descartes','Ballena','144','Hygiela'],
+          dBtnValue:['','Dollar','Italy','Springfield','William Shakespeare','1947','The eye of a tornado','Inter-species communication','Omnigraph','Earth Song','Baseball','San Marino','Switzerland','Samuel Morse','Johannesburg','Mexico','Siam','Rene Descartes','Ballena','144','Hygiela'],
           q2:0,
           num7:7,
           gameScore:0
@@ -38,90 +38,35 @@ export default class Questions extends Component {
     }
  
 
+componentDidMount(){
+
+  document.querySelector('.rez').style.display='none'
 
 
 
-    changeQuestions(){
+
+}
+
+
+    changeQuestions(e){
 
         this.setState({
-            q2:this.state.q2+1
+            q2:this.state.q2+1,
+            gameScore:0
         })
    
         
 
         
-
-      
-
         const btnClass =document.querySelector('.btnClass')
    
         const allBtns =document.querySelectorAll('.allBtns')
         const playBtn =document.querySelector('.playBtn').style.display='none'
+        document.querySelector('.rez').style.display='none'
 
-        const rez =document.querySelector('.rez')
+      
     
     
-
-     const ugasiInetrval= setInterval(()=>{
-          this.setState({
-              num7:this.state.num7-1
-          })
-          if(this.state.num7==0){
-
-              this.setState({
-                  num7:7
-                 
-              })
-          
-              for(let i = 0; i<allBtns.length;i++){
-                allBtns[i].disabled = false;
-               
-               }
-               
-
-          }else if(this.state.q2>20){
-            this.setState({
-                num7:7
-               
-            })
-            clearInterval(ugasiInetrval)
-          }
-
-
-      },1000)
-
-
-   
-const redTime= setInterval(()=>{
-
-
-    if(this.state.q2>20){
-        this.setState({
-            q2:0,
-            gameScore:0
-
-          
-         })
-         const playBtn =document.querySelector('.playBtn').style.display='flex'
-       
-
-   
-         clearInterval(redTime)
-        
-
-
-    }else{
-
-        
-        this.setState({
-            q2:this.state.q2+1
-        })
-
-
-
-        }
-    
-    },7000)
 
     
 
@@ -136,40 +81,91 @@ const redTime= setInterval(()=>{
 
 
         if(e.button=='0' &&  aBtnValue.textContent == this.state.aBtnValue[1]){
-            this.setState({
-                gameScore:this.state.gameScore+5
+
+      
+
+                 this.setState({
+                gameScore:this.state.gameScore+5,
+                q2:this.state.q2+1,
+               
             })
 
+          
    
-        }else if(e.button =='0' && aBtnValue.textContent == this.state.aBtnValue[6]){
-            this.setState({
-                gameScore:this.state.gameScore+5
-            })
-           
+ }else if(e.button =='0' && aBtnValue.textContent == this.state.aBtnValue[6]){
+
+    this.setState({
+        gameScore:this.state.gameScore+5,
+        q2:this.state.q2+1,
+       
+    })
+
+ 
 
         }else if(e.button =='0' && aBtnValue.textContent == this.state.aBtnValue[8]){
+          
             this.setState({
-                gameScore:this.state.gameScore+5
+                gameScore:this.state.gameScore+5,
+                q2:this.state.q2+1,
+               
             })
-           
+
+
+
+
 
         }else if(e.button =='0' && aBtnValue.textContent == this.state.aBtnValue[13]){
+
             this.setState({
-                gameScore:this.state.gameScore+5
+                gameScore:this.state.gameScore+5,
+                q2:this.state.q2+1,
+               
             })
+
+         
+        
+
            
 
         }else if(e.button =='0' && aBtnValue.textContent == this.state.aBtnValue[19]){
+
             this.setState({
-                gameScore:this.state.gameScore+5
+                gameScore:this.state.gameScore+5,
+                q2:this.state.q2+1,
+               
             })
-           
+
+          
+
+
+        }else if(e.button =='0' && aBtnValue.textContent == this.state.aBtnValue[20]){
+            document.querySelector('.playBtn').style.display='flex'
+            document.querySelector('.rez').style.display='flex'
+
+
+            this.setState({
+              
+                q2:0,
+               
+            })
+
+          
+
+
+        }
+        
+        else{
+            this.setState({
+        
+                q2:this.state.q2+1,
+                
+            })
+         
+
 
         }
 
-        for(let i=0;i<allBtns.length;i++){
-            allBtns[i].disabled = true;
-        }
+    
 
     
      
@@ -186,28 +182,55 @@ const redTime= setInterval(()=>{
 
 
         if(e.button=='0' &&  aBtnValue.textContent == this.state.bBtnValue[11]){
+
+            
             this.setState({
-                gameScore:this.state.gameScore+5
+                gameScore:this.state.gameScore+5,
+                q2:this.state.q2+1,
+               
             })
+            
+           
+
 
    
         }else if(e.button =='0' && aBtnValue.textContent == this.state.bBtnValue[18]){
+            
             this.setState({
-                gameScore:this.state.gameScore+5
+                gameScore:this.state.gameScore+5,
+                q2:this.state.q2+1,
+               
             })
-           
+
+          
+
 
         }else if(e.button =='0' && aBtnValue.textContent == this.state.bBtnValue[20]){
-            this.setState({
-                gameScore:this.state.gameScore+5
+         
+
+      
+               document.querySelector('.playBtn').style.display='flex'
+               document.querySelector('.rez').style.display='flex'
+
+               this.setState({
+                gameScore:this.state.gameScore+5,
+                q2:0,
+               
             })
-           
+      
+      
+
+        }else{
+            this.setState({
+        
+                q2:this.state.q2+1,
+                
+            })
+
 
         }
 
-        for(let i=0;i<allBtns.length;i++){
-            allBtns[i].disabled = true;
-        }
+
 
     
     
@@ -228,58 +251,118 @@ const redTime= setInterval(()=>{
 
 
         if(e.button=='0' &&  aBtnValue.textContent == this.state.cBtnValue[3]){
+
             this.setState({
-                gameScore:this.state.gameScore+5
+                gameScore:this.state.gameScore+5,
+                q2:this.state.q2+1,
+               
             })
+
+         
 
    
         }else if(e.button =='0' && aBtnValue.textContent == this.state.cBtnValue[5]){
+
             this.setState({
-                gameScore:this.state.gameScore+5
+                gameScore:this.state.gameScore+5,
+                q2:this.state.q2+1,
+               
             })
-           
+
+          
 
         }else if(e.button =='0' && aBtnValue.textContent == this.state.cBtnValue[7]){
+
             this.setState({
-                gameScore:this.state.gameScore+5
+                gameScore:this.state.gameScore+5,
+                q2:this.state.q2+1,
+               
             })
-           
+
+          
 
         }else if(e.button =='0' && aBtnValue.textContent == this.state.cBtnValue[9]){
+
             this.setState({
-                gameScore:this.state.gameScore+5
+                gameScore:this.state.gameScore+5,
+                q2:this.state.q2+1,
+               
             })
-           
+
+       
 
         }else if(e.button =='0' && aBtnValue.textContent == this.state.cBtnValue[12]){
+
             this.setState({
-                gameScore:this.state.gameScore+5
+                gameScore:this.state.gameScore+5,
+                q2:this.state.q2+1,
+               
             })
-           
+
+
+      
+               
+            
+
+
 
         }else if(e.button =='0' && aBtnValue.textContent == this.state.cBtnValue[14]){
+
             this.setState({
-                gameScore:this.state.gameScore+5
+                gameScore:this.state.gameScore+5,
+                q2:this.state.q2+1,
+               
             })
+      
+
            
 
         }else if(e.button =='0' && aBtnValue.textContent == this.state.cBtnValue[15]){
+
+
             this.setState({
-                gameScore:this.state.gameScore+5
+                gameScore:this.state.gameScore+5,
+                q2:this.state.q2+1,
+               
             })
-           
+
 
         }else if(e.button =='0' && aBtnValue.textContent == this.state.cBtnValue[17]){
+
+
             this.setState({
-                gameScore:this.state.gameScore+5
+                gameScore:this.state.gameScore+5,
+                q2:this.state.q2+1,
+               
             })
-           
+
+        }else if(e.button =='0' && aBtnValue.textContent == this.state.cBtnValue[20]){
+            document.querySelector('.playBtn').style.display='flex'
+            document.querySelector('.rez').style.display='flex'
+
+
+            this.setState({
+             
+                q2:0,
+               
+            })
+   
+
+
+
+        }
+        
+        else{
+            this.setState({
+        
+                q2:this.state.q2+1,
+               
+            })
+
 
         }
 
-        for(let i=0;i<allBtns.length;i++){
-            allBtns[i].disabled = true;
-        }
+       
 
     
     
@@ -305,38 +388,72 @@ const redTime= setInterval(()=>{
 
         if(d.button =='0' &&  dBtnValue.textContent == this.state.dBtnValue[2]){
             this.setState({
-                gameScore:this.state.gameScore+5
+                gameScore:this.state.gameScore+5,
+                q2:this.state.q2+1,
+               
             })
 
+
+           
+         
    
         }else if(d.button =='0' && dBtnValue.textContent == this.state.dBtnValue[4]){
-            this.setState({
-                gameScore:this.state.gameScore+5
-            })
            
-
-        }else if(d.button =='0' && dBtnValue.textContent == this.state.dBtnValue[10]){
             this.setState({
-                gameScore:this.state.gameScore+5
+                gameScore:this.state.gameScore+5,
+                q2:this.state.q2+1,
+               
             })
-           
+               
+            }else if(d.button =='0' && dBtnValue.textContent == this.state.dBtnValue[10]){
+        
 
-        }
+                this.setState({
+                    gameScore:this.state.gameScore+5,
+                    q2:this.state.q2+1,
+                   
+                })
+               
+            
 
         
         
-        else if(d.button =='0' && dBtnValue.textContent == this.state.dBtnValue[16]){
+         } else if(d.button =='0' && dBtnValue.textContent == this.state.dBtnValue[16]){
+
+           
             this.setState({
-                gameScore:this.state.gameScore+5
+                gameScore:this.state.gameScore+5,
+                q2:this.state.q2+1,
+               
             })
            
 
+
+        }else if(d.button =='0' && dBtnValue.textContent == this.state.dBtnValue[20]){
+            document.querySelector('.playBtn').style.display='flex'
+            document.querySelector('.rez').style.display='flex'
+
+           
+            this.setState({
+             
+                q2:0,
+               
+            })
+           
+
+
+        }
+        else{
+            this.setState({
+        
+                q2:this.state.q2+1,
+                
+            })
+
+
         }
 
-        for(let i=0;i<allBtns.length;i++){
-            allBtns[i].disabled = true;
-        }
-
+      
     
     
 
@@ -392,11 +509,6 @@ const redTime= setInterval(()=>{
                     </Col>
 
 
-                     <Col className="b">
-
-                       <h4 className="float-right text-danger" xs={2}>{this.state.num7}</h4>
-                    </Col>
-
                     </Row>
                 </Container>
                 <br></br>
@@ -415,9 +527,9 @@ const redTime= setInterval(()=>{
 
                         </Col>
     
-                         <Col xs={2}>
+                         <Col xs={12} className="float-right">
 
-                     <h3 className="float-right"><Button className="btnClass float-right playBtn"   xs={2} onClick={this.changeQuestions}>Play</Button></h3>
+                     <h3 className="float-right"><Button className="btnClass float-right playBtn"    onClick={this.changeQuestions}>Play</Button></h3>
                         </Col>
                     </Row>
                 </Container>
@@ -425,7 +537,7 @@ const redTime= setInterval(()=>{
 
                 <Container>
                     <Row>
-                        <Col xs={12} className="text-center"><h4>Winning percentage is:<span className="text-primary rez"> {this.state.gameScore}%</span></h4></Col>
+                        <Col xs={12} className="text-center rez"><h4>Winning percentage is:<span className="text-primary"> {this.state.gameScore}%</span></h4></Col>
                     </Row>
                 </Container>
 
