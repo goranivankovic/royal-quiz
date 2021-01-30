@@ -41,6 +41,7 @@ export default class Questions extends Component {
 componentDidMount(){
 
   document.querySelector('.rez').style.display='none'
+ 
 
 
 
@@ -533,7 +534,7 @@ componentDidMount(){
                         </Col>
                     </Row>
                 </Container>
-                <br></br>
+           
 
                 <Container>
                     <Row>
